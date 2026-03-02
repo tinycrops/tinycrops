@@ -1,65 +1,190 @@
-import Image from "next/image";
+'use client'
+
+import { useState, useRef, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+
+type InputType = 'idea' | 'business'
+
+type TerminalLine = {
+  type: 'log' | 'done' | 'error'
+  text: string
+  slug?: string
+}
 
 export default function Home() {
+  const router = useRouter()
+  const [inputType, setInputType] = useState<InputType>('idea')
+  const [value, setValue] = useState('')
+  const [running, setRunning] = useState(false)
+  const [lines, setLines] = useState<TerminalLine[]>([])
+  const terminalRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (terminalRef.current) {
+      terminalRef.current.scrollTop = terminalRef.current.scrollHeight
+    }
+  }, [lines])
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!value.trim() || running) return
+
+    setRunning(true)
+    setLines([{ type: 'log', text: '> Initializing...' }])
+
+    try {
+      const res = await fetch('/api/onboard', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ input: value.trim(), inputType }),
+      })
+
+      if (!res.ok || !res.body) {
+        throw new Error('Failed to start onboarding')
+      }
+
+      const reader = res.body.getReader()
+      const decoder = new TextDecoder()
+      let buffer = ''
+
+      while (true) {
+        const { done, value: chunk } = await reader.read()
+        if (done) break
+
+        buffer += decoder.decode(chunk, { stream: true })
+        const parts = buffer.split('\n\n')
+        buffer = parts.pop() || ''
+
+        for (const part of parts) {
+          const line = part.replace(/^data: /, '').trim()
+          if (!line) continue
+          try {
+            const data = JSON.parse(line) as TerminalLine
+            setLines(prev => [...prev, data])
+            if (data.type === 'done' && data.slug) {
+              setTimeout(() => router.push(`/dashboard/${data.slug}`), 800)
+            }
+          } catch {}
+        }
+      }
+    } catch (err) {
+      setLines(prev => [...prev, { type: 'error', text: `> Error: ${String(err)}` }])
+      setRunning(false)
+    }
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div style={{ maxWidth: 600, margin: '80px auto', padding: '0 24px' }}>
+      {/* Header */}
+      <div style={{ marginBottom: 40 }}>
+        <h1 style={{ fontSize: 18, fontWeight: 'bold', margin: 0 }}>Cofounder</h1>
+        <p style={{ margin: '8px 0 0', color: '#555' }}>
+          Paste your idea. Walk away with a company.
+        </p>
+      </div>
+
+      {!running ? (
+        <form onSubmit={handleSubmit}>
+          {/* Toggle */}
+          <div style={{ display: 'flex', gap: 0, marginBottom: 16, border: '1px solid #000' }}>
+            <button
+              type="button"
+              onClick={() => setInputType('idea')}
+              style={{
+                flex: 1,
+                padding: '6px 12px',
+                background: inputType === 'idea' ? '#000' : '#fff',
+                color: inputType === 'idea' ? '#fff' : '#000',
+                border: 'none',
+                borderRight: '1px solid #000',
+              }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              I have an idea
+            </button>
+            <button
+              type="button"
+              onClick={() => setInputType('business')}
+              style={{
+                flex: 1,
+                padding: '6px 12px',
+                background: inputType === 'business' ? '#000' : '#fff',
+                color: inputType === 'business' ? '#fff' : '#000',
+                border: 'none',
+              }}
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+              I have a business
+            </button>
+          </div>
+
+          {/* Input */}
+          <textarea
+            value={value}
+            onChange={e => setValue(e.target.value)}
+            placeholder={
+              inputType === 'idea'
+                ? 'Describe your idea in a sentence or two...'
+                : 'Paste your website URL or describe your business...'
+            }
+            style={{
+              width: '100%',
+              height: 120,
+              padding: '10px',
+              border: '1px solid #000',
+              resize: 'vertical',
+              background: '#fff',
+              outline: 'none',
+            }}
+            disabled={running}
+          />
+
+          <button
+            type="submit"
+            disabled={!value.trim() || running}
+            style={{
+              marginTop: 12,
+              padding: '8px 24px',
+              background: value.trim() ? '#000' : '#ccc',
+              color: '#fff',
+              border: '1px solid #000',
+              cursor: value.trim() ? 'pointer' : 'not-allowed',
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Start →
+          </button>
+        </form>
+      ) : (
+        /* Terminal */
+        <div>
+          <div
+            ref={terminalRef}
+            style={{
+              border: '1px solid #000',
+              padding: '12px',
+              height: 320,
+              overflowY: 'auto',
+              background: '#fff',
+            }}
           >
-            Documentation
-          </a>
+            {lines.map((line, i) => (
+              <div
+                key={i}
+                style={{
+                  color: line.type === 'error' ? '#c00' : line.type === 'done' ? '#080' : '#000',
+                  marginBottom: 2,
+                  whiteSpace: 'pre-wrap',
+                  wordBreak: 'break-word',
+                }}
+              >
+                {line.text}
+              </div>
+            ))}
+            {running && lines[lines.length - 1]?.type !== 'done' && (
+              <span style={{ animation: 'blink 1s step-end infinite' }}>█</span>
+            )}
+          </div>
+          <style>{`@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }`}</style>
         </div>
-      </main>
+      )}
     </div>
-  );
+  )
 }

@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+data/companies/
+.env.local
+
+# SpacetimeDB build artifacts
+render-clone/server/spacetimedb/target/
+
+# Archives
+*.zip
