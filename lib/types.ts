@@ -30,6 +30,52 @@ export interface Message {
   createdAt: string
 }
 
+export interface FeedItem {
+  id: string
+  companySlug: string
+  agentType: 'ceo' | 'engineering' | 'marketing' | 'research'
+  action: string
+  status: 'running' | 'completed' | 'failed'
+  output?: string
+  createdAt: string
+  completedAt?: string
+}
+
+export interface Tweet {
+  id: string
+  content: string
+  status: 'draft' | 'posted' | 'deleted'
+  scheduledFor?: string
+  postedAt?: string
+  createdAt: string
+}
+
+export interface EmailItem {
+  id: string
+  from: string
+  to: string
+  subject: string
+  body: string
+  type: 'outbound' | 'inbound'
+  status: 'draft' | 'sent'
+  createdAt: string
+}
+
+export interface AgentCycle {
+  id: string
+  startedAt: string
+  completedAt?: string
+  summary?: string
+  feedItemIds: string[]
+}
+
+export interface ModuleConfig {
+  twitter: { enabled: boolean; frequency: 'daily' | 'weekly' }
+  email: { enabled: boolean; dailyLimit: number }
+  ads: { enabled: boolean; dailyBudget: number }
+  engineering: { enabled: boolean }
+}
+
 export interface Company {
   id: string
   slug: string
@@ -42,4 +88,10 @@ export interface Company {
   messages: Message[]
   links: { title: string; url: string }[]
   createdAt: string
+  feedItems: FeedItem[]
+  tweets: Tweet[]
+  emails: EmailItem[]
+  cycles: AgentCycle[]
+  agentEmail: string
+  modules: ModuleConfig
 }

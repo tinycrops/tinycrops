@@ -7,6 +7,7 @@ import { openai, MODEL } from './openai'
 import { saveCompany, updateCompany } from './storage'
 import { Company, Document, Task, CompanyMood } from './types'
 import { ONBOARDING_SYSTEM_PROMPT, MISSION_FORMAT, MARKET_RESEARCH_FORMAT } from './prompts'
+import { runAgentCycle } from './agent-runner'
 import crypto from 'crypto'
 
 function uuid() {
@@ -44,9 +45,10 @@ export async function runOnboardingAgent(
   const companyId = uuid()
 
   // Initialize a skeleton company immediately so we can patch it as we go
+  const pendingSlug = 'pending-' + companyId.slice(0, 8)
   const skeleton: Company = {
     id: companyId,
-    slug: 'pending-' + companyId.slice(0, 8),
+    slug: pendingSlug,
     name: 'Loading...',
     input,
     inputType,
@@ -56,6 +58,17 @@ export async function runOnboardingAgent(
     messages: [],
     links: [],
     createdAt: new Date().toISOString(),
+    feedItems: [],
+    tweets: [],
+    emails: [],
+    cycles: [],
+    agentEmail: `agent@${pendingSlug}.cofounder.app`,
+    modules: {
+      twitter: { enabled: true, frequency: 'daily' },
+      email: { enabled: true, dailyLimit: 10 },
+      ads: { enabled: false, dailyBudget: 50 },
+      engineering: { enabled: true },
+    },
   }
   await saveCompany(skeleton)
 
@@ -266,6 +279,20 @@ Work step by step. Use log() to show your progress. Use web_search if available.
 
   // Final save
   await updateCompany(currentSlug, { documents, tasks, mood, name: companyName })
+
+  // Auto-run the first agent cycle so the dashboard is populated when the user arrives
+  emit({ type: 'log', text: '> Running first agent cycle...' })
+  try {
+    await runAgentCycle(currentSlug, (event) => {
+      if (event.type === 'feed_item') {
+        emit({ type: 'log', text: `> [${event.item.agentType.toUpperCase()}] ${event.item.action}` })
+      } else if (event.type === 'done') {
+        emit({ type: 'log', text: '> First cycle complete.' })
+      }
+    })
+  } catch (err) {
+    emit({ type: 'log', text: `> First cycle had an issue: ${err instanceof Error ? err.message : String(err)}` })
+  }
 
   emit({ type: 'log', text: '> Done.' })
   emit({ type: 'done', text: 'Complete', slug: currentSlug })
