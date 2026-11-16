@@ -1,10 +1,10 @@
 {
-  "method": "Deterministic authored geometry and genuine mixed-script atlas rendering. Same field identities in all mappings. Visual study, not a learned model output or proof of a universal engine.",
+  "method": "Deterministic spatial glyph field, re-rendered with monochrome seeded irregular threshold dithering and vertical screen inspired by tinycrops avatar. Same geometry and identities as colour control. All style counts refer to projected source glyphs before dither; thin strokes can lose pixels. Reference algorithm unknown.",
   "atlas": "source.npz",
   "atlas_sha256": "d50708e2ca193b316e2b7be036cdffcf7453123055a63420ef09c52ad035fd7d",
   "repertoire": "glyph-repertoire.npz",
   "repertoire_sha256": "64945fc7266095462c3bf356435adc17317883c05d9394cfc41cfb29ef7263f6",
-  "renderer_sha256": "928d97b918a0e89e6c76dde5e6dc48b15e0ea905bae20b5d45d2844af9e46430",
+  "renderer_sha256": "57eea25ebb7540a1a3817064feb3c0a8bc1c01e0a9a352857ae03a86ec7f21d2",
   "records": [
     {
       "mapping": "field",
@@ -90,33 +90,38 @@
   "assets": [
     {
       "file": "assets/studio/field.png",
-      "bytes": 586300,
-      "sha256": "e79d73fceb94095fdacfa2bc4415d84389cc26cdbe60de6b050e8f20193c90a8"
+      "bytes": 75523,
+      "sha256": "d2297af5024712db2a76a70210e68f5c91e8041b838b43a6d5b5237f5af93650"
     },
     {
       "file": "assets/studio/sculpture.png",
-      "bytes": 544191,
-      "sha256": "1eb3d369acad5f8d3f7f6f3b359e340d6489702910e1226819aa10dea903a959"
+      "bytes": 73931,
+      "sha256": "659691e9c164adfdc48e267f9fc2ef8c4378ae38362525b93468314e5b6bc52a"
     },
     {
       "file": "assets/studio/social-preview.png",
-      "bytes": 319266,
-      "sha256": "0ef7bf4b8631b12e96ece46430560226ded740c0e8f1400dace878e29a89343a"
+      "bytes": 62276,
+      "sha256": "9215d62d63e428ef7c8ac3aa044fd1e13d4c459bf614b4e010df90169342471c"
     },
     {
       "file": "assets/studio/studio-banner.png",
-      "bytes": 541305,
-      "sha256": "7f55f1c13f8ff182eaad42bd8e829b58341d5adcb80eb3fd529c0a25708f89ed"
+      "bytes": 96425,
+      "sha256": "01835ab00e9884d9a5b5a87b58bb05da4e2a2132aed0ce917203fbe6232654da"
     },
     {
       "file": "assets/studio/studio-mark.png",
-      "bytes": 421475,
-      "sha256": "054f40338f6180e03e2409803e1c256c5f4552ac96841f7135e5f72206307d67"
+      "bytes": 47927,
+      "sha256": "ca952bbe6c0ffa94de7eda9a944bd7e71481d11096b9f7e57986caa9dec4e891"
     },
     {
       "file": "assets/studio/world.png",
-      "bytes": 601211,
-      "sha256": "9731592d0307597becb2ca42ad9dbe8f0c4228bce89345ce3dbe6f991ee09c67"
+      "bytes": 79688,
+      "sha256": "b6f95d226039fdb60fba0a4d7994b99d6c72b1cde320a3176518b33dae7c05c1"
     }
-  ]
+  ],
+  "reference": {
+    "url": "https://avatars.githubusercontent.com/u/13264408?v=4",
+    "sha256": "6782074a86802c5c764adb3b2d74a940c4361a17ba3192e9709e44574a8d73fd",
+    "observations": "Monochrome, deep blacks, irregular fine dots, subtle vertical screen. Original dithering algorithm unknown."
+  }
 }
