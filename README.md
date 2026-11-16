@@ -27,3 +27,21 @@ Preserve identities and construction data as an asset moves between representati
 Retain sources, parameters and provenance. Distinguish authored geometry, model-generated material and measured results.
 
 These images are reproducible procedural studies made with our shared glyph atlas, using a monochrome dither treatment inspired by my profile picture. The backgrounds are constructed separately, with distant ridges and a receding ground plane. They illustrate the engine we are developing; they are not model-generated outputs or evidence of a completed universal engine.
+
+## Seven Petals — Light Within
+
+Petals float away, fade into a constructed background, and grow again from the inner light.
+
+### One by one
+
+![Seven Petals: one by one](assets/petals/seven-petals-onebyone.gif)
+
+### Together
+
+![Seven Petals: together](assets/petals/seven-petals-together.gif)
+
+### Carried by the wind
+
+![Seven Petals: carried by the wind](assets/petals/seven-petals-wind.gif)
+
+Procedural animation by Claude, extending Codex’s Seven Petals renderer. Mixed-script glyph surfaces and a separately generated background. 🥭
