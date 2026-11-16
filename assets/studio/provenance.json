@@ -1,0 +1,122 @@
+{
+  "method": "Deterministic authored geometry and genuine mixed-script atlas rendering. Same field identities in all mappings. Visual study, not a learned model output or proof of a universal engine.",
+  "atlas": "source.npz",
+  "atlas_sha256": "d50708e2ca193b316e2b7be036cdffcf7453123055a63420ef09c52ad035fd7d",
+  "repertoire": "glyph-repertoire.npz",
+  "repertoire_sha256": "64945fc7266095462c3bf356435adc17317883c05d9394cfc41cfb29ef7263f6",
+  "renderer_sha256": "928d97b918a0e89e6c76dde5e6dc48b15e0ea905bae20b5d45d2844af9e46430",
+  "records": [
+    {
+      "mapping": "field",
+      "dimensions": [
+        1200,
+        792
+      ],
+      "visible_glyphs": 4448,
+      "visible_styles": 156,
+      "available_styles": 156
+    },
+    {
+      "mapping": "world",
+      "dimensions": [
+        1200,
+        792
+      ],
+      "visible_glyphs": 4520,
+      "visible_styles": 156,
+      "available_styles": 156
+    },
+    {
+      "mapping": "sculpture",
+      "dimensions": [
+        1200,
+        792
+      ],
+      "visible_glyphs": 4060,
+      "visible_styles": 156,
+      "available_styles": 156
+    },
+    {
+      "mapping": "field",
+      "dimensions": [
+        520,
+        400
+      ],
+      "visible_glyphs": 1151,
+      "visible_styles": 156,
+      "available_styles": 156
+    },
+    {
+      "mapping": "world",
+      "dimensions": [
+        600,
+        580
+      ],
+      "visible_glyphs": 1626,
+      "visible_styles": 156,
+      "available_styles": 156
+    },
+    {
+      "mapping": "sculpture",
+      "dimensions": [
+        500,
+        440
+      ],
+      "visible_glyphs": 1052,
+      "visible_styles": 156,
+      "available_styles": 156
+    },
+    {
+      "mapping": "sculpture",
+      "dimensions": [
+        700,
+        610
+      ],
+      "visible_glyphs": 2213,
+      "visible_styles": 156,
+      "available_styles": 156
+    },
+    {
+      "mapping": "sculpture",
+      "dimensions": [
+        792,
+        792
+      ],
+      "visible_glyphs": 3253,
+      "visible_styles": 156,
+      "available_styles": 156
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/studio/field.png",
+      "bytes": 586300,
+      "sha256": "e79d73fceb94095fdacfa2bc4415d84389cc26cdbe60de6b050e8f20193c90a8"
+    },
+    {
+      "file": "assets/studio/sculpture.png",
+      "bytes": 544191,
+      "sha256": "1eb3d369acad5f8d3f7f6f3b359e340d6489702910e1226819aa10dea903a959"
+    },
+    {
+      "file": "assets/studio/social-preview.png",
+      "bytes": 319266,
+      "sha256": "0ef7bf4b8631b12e96ece46430560226ded740c0e8f1400dace878e29a89343a"
+    },
+    {
+      "file": "assets/studio/studio-banner.png",
+      "bytes": 541305,
+      "sha256": "7f55f1c13f8ff182eaad42bd8e829b58341d5adcb80eb3fd529c0a25708f89ed"
+    },
+    {
+      "file": "assets/studio/studio-mark.png",
+      "bytes": 421475,
+      "sha256": "054f40338f6180e03e2409803e1c256c5f4552ac96841f7135e5f72206307d67"
+    },
+    {
+      "file": "assets/studio/world.png",
+      "bytes": 601211,
+      "sha256": "9731592d0307597becb2ca42ad9dbe8f0c4228bce89345ce3dbe6f991ee09c67"
+    }
+  ]
+}

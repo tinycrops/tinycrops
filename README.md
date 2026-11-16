@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<picture>
+  <img src="assets/studio/studio-banner.png" alt="tinycrops — Generative ASCII in every dimension. A mixed-script field becomes a sphere and folded sculpture." width="100%">
+</picture>
 
-## Getting Started
+## Generative, observable, provable ASCII art
 
-First, run the development server:
+Exploring how glyphs become materials, objects and animated worlds.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Our studio brings together procedural graphics, local models and inspectable experiments. We work with character shapes, ink density and negative space across writing systems, following the same artwork from a flat field into spatial form.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<img src="assets/studio/field.png" alt="A woven plane of mixed-script glyphs with cyan, pink and violet shading." width="100%">
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Glyphs become material
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Different strokes and densities give us a richer vocabulary for texture, light and form.
 
-## Learn More
+<img src="assets/studio/world.png" alt="The retained glyph field wraps around a spherical world." width="100%">
 
-To learn more about Next.js, take a look at the following resources:
+### Material becomes a world
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Preserve identities and construction data as an asset moves between representations.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<img src="assets/studio/sculpture.png" alt="The same glyph field forms a folded spatial sculpture." width="100%">
 
-## Deploy on Vercel
+### Keep the process observable
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Retain sources, parameters and provenance. Distinguish authored geometry, model-generated material and measured results.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+These images are reproducible procedural studies made with our shared glyph atlas. They illustrate the engine we are developing; they are not model-generated outputs or evidence of a completed universal engine.
