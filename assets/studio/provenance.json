@@ -1,10 +1,10 @@
 {
-  "method": "Deterministic spatial glyph field, re-rendered with monochrome seeded irregular threshold dithering and vertical screen inspired by tinycrops avatar. Same geometry and identities as colour control. All style counts refer to projected source glyphs before dither; thin strokes can lose pixels. Reference algorithm unknown.",
+  "method": "Deterministic spatial glyph field, re-rendered with monochrome seeded irregular threshold dithering and vertical screen inspired by tinycrops avatar. Same geometry and identities as colour control. All style counts refer to projected source glyphs before dither; thin strokes can lose pixels. Reference algorithm unknown. Independent constructed background: ridges, perspective floor, contact darkness; seed 34821. Background grain remains separate from glyph material.",
   "atlas": "source.npz",
   "atlas_sha256": "d50708e2ca193b316e2b7be036cdffcf7453123055a63420ef09c52ad035fd7d",
   "repertoire": "glyph-repertoire.npz",
   "repertoire_sha256": "64945fc7266095462c3bf356435adc17317883c05d9394cfc41cfb29ef7263f6",
-  "renderer_sha256": "57eea25ebb7540a1a3817064feb3c0a8bc1c01e0a9a352857ae03a86ec7f21d2",
+  "renderer_sha256": "9c99d71d700cef456965b53331892ce9ac3b2e4d817aaa875e9e3524ae2aff76",
   "records": [
     {
       "mapping": "field",
@@ -90,38 +90,33 @@
   "assets": [
     {
       "file": "assets/studio/field.png",
-      "bytes": 75523,
-      "sha256": "d2297af5024712db2a76a70210e68f5c91e8041b838b43a6d5b5237f5af93650"
+      "bytes": 134698,
+      "sha256": "7945f7bc145b558f1165ff68b2f6ff629e727252aa2d9b4b688593a6e11ca0de"
     },
     {
       "file": "assets/studio/sculpture.png",
-      "bytes": 73931,
-      "sha256": "659691e9c164adfdc48e267f9fc2ef8c4378ae38362525b93468314e5b6bc52a"
+      "bytes": 134268,
+      "sha256": "2993625ac8925d6e705d07ee7354ad5e4d58f195e3dd1f89cbbd99ba93c57279"
     },
     {
       "file": "assets/studio/social-preview.png",
-      "bytes": 62276,
-      "sha256": "9215d62d63e428ef7c8ac3aa044fd1e13d4c459bf614b4e010df90169342471c"
+      "bytes": 117771,
+      "sha256": "e3adc15deca4e776d518d92fd6d29f10621db47570a8a481144ab0f69948d102"
     },
     {
       "file": "assets/studio/studio-banner.png",
-      "bytes": 96425,
-      "sha256": "01835ab00e9884d9a5b5a87b58bb05da4e2a2132aed0ce917203fbe6232654da"
+      "bytes": 188879,
+      "sha256": "0b13d242618f0212488756800376146d19e798f31231c1ac9b1309a775338efe"
     },
     {
       "file": "assets/studio/studio-mark.png",
-      "bytes": 47927,
-      "sha256": "ca952bbe6c0ffa94de7eda9a944bd7e71481d11096b9f7e57986caa9dec4e891"
+      "bytes": 86520,
+      "sha256": "7f545371ba87cf1653904b4c53069e60f2675261d8dc8f6dcc18f4d401e80911"
     },
     {
       "file": "assets/studio/world.png",
-      "bytes": 79688,
-      "sha256": "b6f95d226039fdb60fba0a4d7994b99d6c72b1cde320a3176518b33dae7c05c1"
+      "bytes": 138322,
+      "sha256": "1bb7432ebd2ef73dbc5e4a7850820e9fc0241e673ae2072066a9eb5ef66d54a8"
     }
-  ],
-  "reference": {
-    "url": "https://avatars.githubusercontent.com/u/13264408?v=4",
-    "sha256": "6782074a86802c5c764adb3b2d74a940c4361a17ba3192e9709e44574a8d73fd",
-    "observations": "Monochrome, deep blacks, irregular fine dots, subtle vertical screen. Original dithering algorithm unknown."
-  }
+  ]
 }

@@ -26,4 +26,4 @@ Preserve identities and construction data as an asset moves between representati
 
 Retain sources, parameters and provenance. Distinguish authored geometry, model-generated material and measured results.
 
-These images are reproducible procedural studies made with our shared glyph atlas, using a monochrome dither treatment inspired by my profile picture. They illustrate the engine we are developing; they are not model-generated outputs or evidence of a completed universal engine.
+These images are reproducible procedural studies made with our shared glyph atlas, using a monochrome dither treatment inspired by my profile picture. The backgrounds are constructed separately, with distant ridges and a receding ground plane. They illustrate the engine we are developing; they are not model-generated outputs or evidence of a completed universal engine.
