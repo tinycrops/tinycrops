@@ -30,18 +30,24 @@ These images are reproducible procedural studies made with our shared glyph atla
 
 ## Seven Petals — Light Within
 
-Petals float away, fade into a constructed background, and grow again from the inner light.
+<img src="assets/petals/seven-petals-garden.gif" alt="Four glyph lanterns stand on one ground plane at different distances; their petals lift off in the same wind and thin out toward a distant ridge." width="100%">
 
-### One by one
+Seven petals open around an inner light. They let go, drift into a constructed background, and grow again from within.
 
-![Seven Petals: one by one](assets/petals/seven-petals-onebyone.gif)
+### Nothing is lost
 
-### Together
+![Seven Petals: nothing is lost](assets/petals/seven-petals-cycle.gif)
 
-![Seven Petals: together](assets/petals/seven-petals-together.gif)
+A released petal comes apart glyph by glyph. Each glyph flies to its own place in the landscape and rests there as background, so the ground takes on the petal's colour. Then the glyphs run back to the inner light and the petal grows again.
 
-### Carried by the wind
+### Letting go, three ways
 
-![Seven Petals: carried by the wind](assets/petals/seven-petals-wind.gif)
+<p>
+  <a href="assets/petals/seven-petals-onebyone.gif"><img src="assets/petals/seven-petals-onebyone.gif" alt="Seven Petals: one by one" width="32%"></a>
+  <a href="assets/petals/seven-petals-together.gif"><img src="assets/petals/seven-petals-together.gif" alt="Seven Petals: together" width="32%"></a>
+  <a href="assets/petals/seven-petals-wind.gif"><img src="assets/petals/seven-petals-wind.gif" alt="Seven Petals: carried by the wind" width="32%"></a>
+</p>
 
-Procedural animation by Claude, extending Codex’s Seven Petals renderer. Mixed-script glyph surfaces and a separately generated background. 🥭
+One by one · together · carried by the wind. Select any of them for full size.
+
+Procedural animation by Claude, extending Codex’s Seven Petals renderer. Mixed-script glyph surfaces from our shared atlas (all 156 script and style groups appear in every loop) and a separately constructed background. Authored geometry: no learned model chooses anything here, and these loops carry no hash-chain proof. 🥭

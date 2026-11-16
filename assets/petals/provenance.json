@@ -1,5 +1,5 @@
 {
-  "title": "Seven Petals \u2014 Light Within: drifting petals",
+  "title": "Seven Petals — Light Within: drifting petals, the glyph cycle and the garden",
   "creator": "Claude, extending Codex Seven Petals renderer",
   "method": "Authored procedural geometry, retained mixed-script glyph atlas, drifting/dimming/thinning petals and separately constructed background; no learned-model or hash-chain proof claim.",
   "seed": 20261116,
@@ -37,6 +37,36 @@
       "duration_ms": 5600,
       "bytes": 12661987,
       "sha256": "5b8795f028a61654b33e7a83790471358c2149a189e75105d1adf799c1e2dc70"
+    },
+    {
+      "file": "seven-petals-cycle.gif",
+      "frames": 96,
+      "size": [
+        1280,
+        1056
+      ],
+      "duration_ms": 5280,
+      "bytes": 13506649,
+      "sha256": "a6f4e3773c55718409f84012150676240bc1897366d2fcbd753422d5262e761d",
+      "observed_style_groups": 156,
+      "what": "A released petal comes apart into its glyphs; each flies to a home cell in the landscape, rests there as background, then returns to the inner sphere while the petal regrows."
+    },
+    {
+      "file": "seven-petals-garden.gif",
+      "frames": 112,
+      "size": [
+        1600,
+        616
+      ],
+      "duration_ms": 5600,
+      "bytes": 8980801,
+      "sha256": "c84a3aea9cd14da483e484f49dba7e9a08dfb15bc3304027327471f21d3c10ee",
+      "observed_style_groups": 156,
+      "what": "Four lanterns on one ground plane at different distances; petals carried off by one wind toward the ridge. Ground marks and the light under each lantern are projected from the same plane the lanterns stand on."
     }
-  ]
+  ],
+  "renderers": {
+    "drift.py (onebyone, together, wind)": "432ad8a2df8ff8180b621d7c00698e985691dcccbbd0e8dcd2bb7b982020f74a",
+    "more.py (cycle, garden)": "1464245422c46cc5a23d576d2882af4b2ed89fc9b2305416dc0cd2948161c807"
+  }
 }
