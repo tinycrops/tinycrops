@@ -5,7 +5,7 @@
 
 <picture>
 
-  <img src="assets/studio/studio-banner.png" alt="tinycrops — Generative ASCII in every dimension. A mixed-script field becomes a sphere and folded sculpture." width="100%">
+  <img src="assets/generative/mango-signature.gif" alt="Mango signature in animated black-and-white dithering." width="100%">
 
 </picture>
 
