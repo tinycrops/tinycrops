@@ -1,0 +1,36 @@
+{
+  "method": "Deterministic periodic parametric geometry; authored motion and independent terrain. No learned model or hash-chain proof.",
+  "seed": "deterministic integer identities",
+  "dimensions": [
+    800,
+    550
+  ],
+  "duration_seconds": 5.76,
+  "atlas_sha256": "c16390edf5ab77c7d9e884ac36b238a69b2212514bcc6684c4df6fae72f192f5",
+  "records": [
+    {
+      "file": "tidal-weave.gif",
+      "frames": 72,
+      "styles_visible": 156,
+      "available_styles": 156,
+      "bytes": 4564932,
+      "sha256": "d7160268c2143b514afa7d7df5be43155cf364d7664429b32fb33160da7079e8"
+    },
+    {
+      "file": "breathing-knot.gif",
+      "frames": 72,
+      "styles_visible": 156,
+      "available_styles": 156,
+      "bytes": 5286405,
+      "sha256": "5b294467a2e21292f4760ac07f551f84753079ce7197376b588cc13e9e9e2ac2"
+    },
+    {
+      "file": "night-murmuration.gif",
+      "frames": 72,
+      "styles_visible": 156,
+      "available_styles": 156,
+      "bytes": 7000877,
+      "sha256": "7dc176c5059d3a3d5ab1ddc6722634a31f892629ef0bacdafc034eae1125db4c"
+    }
+  ]
+}

@@ -28,6 +28,28 @@ Retain sources, parameters and provenance. Distinguish authored geometry, model-
 
 These images are reproducible procedural studies made with our shared glyph atlas, using a monochrome dither treatment inspired by my profile picture. The backgrounds are constructed separately, with distant ridges and a receding ground plane. They illustrate the engine we are developing; they are not model-generated outputs or evidence of a completed universal engine.
 
+## Moving worlds
+
+### Tidal weave
+
+<a href="assets/generative/tidal-weave.gif"><img src="assets/generative/tidal-weave.gif" alt="Cyan, violet and pink mixed-script threads form a traveling wave above an etched night landscape." width="100%"></a>
+
+Crossing waves pass through a woven glyph surface. The threads keep their identities as the crests travel.
+
+### Breathing knot
+
+<a href="assets/generative/breathing-knot.gif"><img src="assets/generative/breathing-knot.gif" alt="An interlaced glyph knot expands and contracts above a receding ground plane." width="100%"></a>
+
+A continuous tube folds through itself, changing its shape and thickness around a closed path.
+
+### Night murmuration
+
+<a href="assets/generative/night-murmuration.gif"><img src="assets/generative/night-murmuration.gif" alt="Small mixed-script wings trace interlocking flight paths above distant ridges." width="100%"></a>
+
+A flock of character-built wings follows overlapping orbits, gathering and opening above the hills.
+
+Three seamless procedural loops, made with 156 script and style groups from our shared glyph atlas. Fixed cameras, separately constructed landscapes and authored motion. [Generator and reproduction instructions](generative/) · [Parameters and asset hashes](assets/generative/provenance.json).
+
 ## Seven Petals — Light Within
 
 <img src="assets/petals/seven-petals-garden.gif" alt="Four glyph lanterns stand on one ground plane at different distances; their petals lift off in the same wind and thin out toward a distant ridge." width="100%">
