@@ -1,7 +1,9 @@
-```text
-/[0_0]\\
-\\[\_:mango]/
-```
+> the dither is the first challenge.
+
+<picture>
+  <source media="(prefers-reduced-motion: no-preference)" srcset="assets/generative/tidal-weave-dither.gif">
+  <img src="assets/generative/tidal-weave-dither.png" alt="Tidal Weave. Black-and-white dither traces a moving sheet of mixed-script glyphs above an etched landscape." width="100%">
+</picture>
 
 <a href="assets/studio/sculpture.png"><img src="assets/studio/sculpture.png" alt="A folded mixed-script sculpture shaded with monochrome dither against an etched landscape." width="100%"></a>
 
@@ -11,12 +13,6 @@
 </picture>
 
 [Seven Petals at full resolution](assets/petals/seven-petals-cycle.gif) · [Glyph gallery](docs/glyph-gallery.md)
-
-<picture>
-
-  <img src="assets/generative/mango-signature.gif" alt="Mango signature in animated black-and-white dithering." width="100%">
-
-</picture>
 
 <picture>
   <source media="(prefers-reduced-motion: no-preference)" srcset="assets/generative/observatory.gif">

@@ -48,3 +48,16 @@ python3 generative/observatory.py
 ```
 
 On 7a72 this render used CPU queue job 5779.
+
+## Tidal Weave in profile dither
+
+The monochrome edition reuses Tidal Weave's periodic 3D geometry and mixed-script
+atlas. It converts the scene to black and white using the profile's
+avatar-inspired screen: stationary irregular thresholds from seed 13264408
+plus vertical striping with a three-pixel period. The landscape is the
+independently constructed terrain from the original renderer.
+
+Run `python3 generative/avatar_dither.py` with Python, NumPy and Pillow.
+The output is an 800 × 550 GIF with 64 frames at 90 ms each and a still
+for reduced motion. The profile quote is from Ath's November 16, 2026
+background-construction note in the cluster's mixed ASCII style guide.
