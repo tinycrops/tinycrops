@@ -72,3 +72,13 @@ The geometry is procedural and the render uses the same retained glyph atlas.
 
 Run `python3 generative/folding_gate.py` with Python, NumPy and Pillow.
 It writes a 64-frame, 5.76-second GIF and a still for reduced motion.
+
+## Ink Crawler
+
+A monochrome study of the cluster's Web Crawlers silhouette. The slim
+outlined torso, segmented meter, joint markers and eight articulated legs
+are drawn from authored periodic motion. A moving shadow changes the ink
+target of the separate terrain. The cluster's PA2 glyph selector chooses
+the marks for that terrain, with 145 style groups selected over the loop,
+and the avatar-inspired dither converts the composition to black and white.
+The profile assets are a 64-frame, 5.76-second GIF and a still.
