@@ -59,8 +59,8 @@ def geometry(name,t):
         strength=.65+.35*np.cos(phase+t)**2
     return np.stack([x,y,z],axis=1),strength
 
-def frame(name,t):
-    p,light=geometry(name,t)
+def frame(name, t, *, surface=geometry, background=BACK):
+    p, light = surface(name, t)
     # Fixed viewing angle, depth-sorted occupied cells, crisp glyph compositing.
     yaw=.34
     x=p[:,0]*np.cos(yaw)+p[:,2]*np.sin(yaw)
@@ -73,7 +73,7 @@ def frame(name,t):
     ids=np.flatnonzero(keep); pix=gy[ids]*C+gx[ids]
     order=np.lexsort((depth[ids],pix));ids=ids[order];pix=pix[order]
     _,first=np.unique(pix,return_index=True);ids=ids[first];pix=pix[first]
-    glyph=BGID.copy().ravel(); color=(BACK.copy()*1.5).reshape(-1,3)
+    glyph=BGID.copy().ravel(); color=(background*1.5).reshape(-1,3)
     glyph[pix]=GLYPH[ids]
     color[pix]=np.minimum(COLORS[ids]*light[ids,None]*1.35,255)
     masks=ATLAS[glyph].reshape(R,C,11,8).transpose(0,2,1,3).reshape(H,W)

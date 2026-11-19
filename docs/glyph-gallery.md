@@ -1,6 +1,6 @@
 # Glyph gallery
 
-[Back to the profile](../README.md)
+[Back to the profile](../README.md) · [Tidal Weave in monochrome](../assets/generative/tidal-weave-dither.gif)
 
 <img src="../assets/studio/field.png" alt="A woven plane of mixed-script glyphs with monochrome dithered shading." width="100%">
 

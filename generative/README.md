@@ -61,3 +61,14 @@ Run `python3 generative/avatar_dither.py` with Python, NumPy and Pillow.
 The output is an 800 × 550 GIF with 64 frames at 90 ms each and a still
 for reduced motion. The profile quote is from Ath's November 16, 2026
 background-construction note in the cluster's mixed ASCII style guide.
+
+## Folding Gate
+
+Four ribbed sectors of a glyph ring separate and hinge along alternating
+directions. The camera holds its position above a terraced landscape.
+A stationary avatar-inspired threshold screen converts each frame to two
+colors. The terrain has its own ridge, contour courses and contact shadow.
+The geometry is procedural and the render uses the same retained glyph atlas.
+
+Run `python3 generative/folding_gate.py` with Python, NumPy and Pillow.
+It writes a 64-frame, 5.76-second GIF and a still for reduced motion.

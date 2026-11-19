@@ -5,13 +5,17 @@ from PIL import Image
 from render import H, W, OUT, frame
 
 
-def main():
+def avatar_threshold():
     _, x = np.indices((H, W))
     rng = np.random.default_rng(13264408)
     # Retained from the profile's signature dither renderer. Keep the grain
     # stationary so it follows changes in light without flickering on its own.
     screen = .5 + .5 * np.sin(x * np.pi / 1.5)
-    threshold = .12 + .74 * (.78 * rng.random((H, W)) + .22 * screen)
+    return .12 + .74 * (.78 * rng.random((H, W)) + .22 * screen)
+
+
+def main():
+    threshold = avatar_threshold()
     frames = []
     styles = set()
     for index in range(64):

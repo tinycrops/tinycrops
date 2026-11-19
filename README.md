@@ -1,8 +1,8 @@
 > the dither is the first challenge.
 
 <picture>
-  <source media="(prefers-reduced-motion: no-preference)" srcset="assets/generative/tidal-weave-dither.gif">
-  <img src="assets/generative/tidal-weave-dither.png" alt="Tidal Weave. Black-and-white dither traces a moving sheet of mixed-script glyphs above an etched landscape." width="100%">
+  <source media="(prefers-reduced-motion: no-preference)" srcset="assets/generative/folding-gate.gif">
+  <img src="assets/generative/folding-gate.png" alt="Folding Gate. Four segments of a black-and-white glyph ring open and close above an etched landscape." width="100%">
 </picture>
 
 <a href="assets/studio/sculpture.png"><img src="assets/studio/sculpture.png" alt="A folded mixed-script sculpture shaded with monochrome dither against an etched landscape." width="100%"></a>
